@@ -1,0 +1,38 @@
+create table if not exists scm_nutrition_ocr
+(
+	gid varchar(100),
+	barcode varchar(100) comment '商品条码',
+	productname varchar(100) comment '商品名称',
+	englishname varchar(100) comment '英文名',
+	categories varchar(100) comment '商品分类',
+	packagingaid varchar(100) comment '包装辅助',
+	department varchar(100) comment '所属部门',
+	productmanual text comment '产品说明',
+	instructions varchar(100) comment '使用方法',
+	introductionvideo varchar(100) comment '介绍视频',
+	videoimage varchar(100) comment '视频背景图片',
+	isdelete int comment '是否删除',
+	isvalid int comment '是否启用',
+	createby varchar(100) comment '创建人',
+	createdate datetime comment '创建时间',
+	lasteditby varchar(100) comment '最后修改人',
+	lasteditdate datetime comment '最后修改时间',
+	productdetailsimg1 varchar(100) comment '产品详情图片1',
+	productdetailsimg2 varchar(100) comment '产品详情图片2',
+	productdetailsimg3 varchar(100) comment '产品详情图片3',
+	productdetailsimg4 varchar(100) comment '产品详情图片4',
+	productdetailsimg5 varchar(100) comment '产品详情图片5',
+	pic_links text comment '图片链接',
+	sentence text comment '图片识别文字',
+	nutrition_basic varchar(100) comment '营养基准',
+	energy varchar(100) comment '能量',
+	protein varchar(100) comment '脂肪',
+	fat varchar(100) comment '反式脂肪酸',
+	trans_fat varchar(100) comment '碳水化合物',
+	carbohydrate varchar(100) comment '膳食纤维',
+	fiber varchar(100) comment '膳食纤维',
+	sodium varchar(100) comment '钠',
+	carnitine varchar(100) comment '左旋肉碱'
+);
+
+alter table scm_nutrition_ocr set tblproperties ('comment' = 'scm产品营养成分表');
